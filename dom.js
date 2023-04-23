@@ -14,7 +14,7 @@ addItems.style.color = 'green';
 
 const items=document.getElementsByClassName('list-group-item');
 
-item[2].style.backgroundColor = 'green';
+items[2].style.backgroundColor = 'green';
 
 for(let i=0;i<items.length;i++){
     items[i].style.fontWeight = 'bold';
