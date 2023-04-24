@@ -29,8 +29,19 @@ for(let i=0;i<li.length;i++){
     li[i].style.backgroundColor = 'grey';
 } */
 
-const secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundColor = 'green';
+// const secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.backgroundColor = 'green';
 
-const thirdItem = document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.visibility = 'hidden';
+// const thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+// thirdItem.style.visibility = 'hidden';
+
+const items = document.querySelectorAll('.list-group-item');
+
+items[1].style.backgroundColor = 'green';
+
+//const odd = document.querySelectorAll('.list-group-item:nth-child(odd)');
+const odd = document.querySelectorAll('li:nth-child(odd)');
+
+for(let i=0;i<odd.length;i++){
+    odd[i].style.backgroundColor = '#7EF36B';
+}
