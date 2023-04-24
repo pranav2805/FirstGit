@@ -63,10 +63,10 @@ function filterItem(e){
     var text = e.target.value.toLowerCase();
     //console.log(text);
 
-    //var items = itemList.getElementsByTagName('li');
+    var items = itemList.getElementsByTagName('li');
     //console.log(items);
 
-    var items = itemList.get
+    //var items = itemList.get
 
     Array.from(items).forEach(function(item){
         var itemName = item.firstChild.textContent;
