@@ -17,13 +17,13 @@ function addItem(e){
     var li = document.createElement('li');
     li.className = 'list-group-item';
 
-    li.appendChild(document.createTextNode(inputText));
-
+    var inputTextNode = document.createTextNode(inputText);
+    var descTextNode = document.createTextNode(descText);
     var brk = document.createElement('br');
 
+    li.appendChild(inputTextNode);
     li.appendChild(brk);
-
-    li.appendChild(document.createTextNode(descText));
+    li.appendChild(descTextNode);
 
     var deleteBtn = document.createElement('button');
 
@@ -64,14 +64,13 @@ function filterItem(e){
     //console.log(text);
 
     var items = itemList.getElementsByTagName('li');
-    //console.log(items);
-
-    //var items = itemList.get
 
     Array.from(items).forEach(function(item){
         var itemName = item.firstChild.textContent;
-        //console.log(itemName);
-        if(itemName.toLowerCase().indexOf(text) != -1){
+        //description will be the 3rd child bcoz of break line between item name & description
+        var description = item.childNodes[2].textContent;
+
+        if((itemName.toLowerCase().indexOf(text) != -1) || (description.toLowerCase().indexOf(text) != -1)){
             item.style.display = 'block';
         }else{
             item.style.display = 'none';
