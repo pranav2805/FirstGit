@@ -20,11 +20,17 @@ for(let i=0;i<items.length;i++){
     items[i].style.fontWeight = 'bold';
 } */
 
-const li=document.getElementsByTagName('li');
+/* const li=document.getElementsByTagName('li');
 
 console.log(li);
 
 for(let i=0;i<li.length;i++){
     li[i].style.fontWeight = 'bold';
     li[i].style.backgroundColor = 'grey';
-}
+} */
+
+const secondItem = document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.backgroundColor = 'green';
+
+const thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.visibility = 'hidden';
